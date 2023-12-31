@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecionador</title>
+</head>
+<body>
+    <h1>Redirecionando...</h1>
+    
+    <script>
+        // URL padrão para redirecionamento
+        var destinoPadrao = 'https://typebot.co/tema-whats-app-1-r7sbkin';
+
+        // Verifica se há um destino personalizado na URL
+        var urlParams = new URLSearchParams(window.location.search);
+        var destinoCustomizado = urlParams.get('destino');
+
+        // Redireciona para o destino escolhido (padrão ou personalizado)
+        var destinoFinal = destinoCustomizado ? destinoCustomizado : destinoPadrao;
+        window.location.replace(destinoFinal);
+    </script>
+</body>
+</html>
